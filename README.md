@@ -1,3 +1,4 @@
+This is a fork of the amazing work by [ agoldst ](https://github.com/agoldst/tex/tree/master/lecture-slides) on using pandoc (with some crazy modidications) to take a markdown file and convert it to 2 beamer presentaions:     a notes one and a slides one.
 # Markdown to lecture slides
 
 (with some beamer bells and whistles, by a Keynote refugee)
