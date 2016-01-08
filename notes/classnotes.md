@@ -1,10 +1,11 @@
 ---
 title: A Sample Set of Slides
-author: Your Name Here
+author: Jonah Langlieb
 date: Totally Not the Last Minute
+color: jonah
 ---
 
-# An ordinary slide
+# An flowery fjord fire *ordinary* slide
 
 
 ## And a block
@@ -15,7 +16,7 @@ And some text underneath.
 
 \note{
 
-Here are my notes.
+[ Here ](http://google.com) **are** my notes.
 
 }
 
@@ -26,11 +27,15 @@ Here are my notes.
 
 ### WITH SOME MORE
 TESTING
+
+#### and some test8ing
+*again*
 \note{
 
 A note on my list.
 
 }
+
 
 # Overlay Tricks
 
@@ -81,3 +86,9 @@ Grid demo LL
 To get overlay effects with materials placed using \texttt{textpos}, you have to specify the overlay within the \texttt{textblock} environment.
 
 }
+
+#another section
+
+##testing
+ - hello list
+ - again
