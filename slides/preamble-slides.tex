@@ -4,22 +4,34 @@
 \metroset{titleformat=allsmallcaps}
 \metroset{block=fill}
 % if set light/dark, uncomment next section accordingly
-\metroset{background=dark}
 \metroset{progressbar=none}
-
-% keeps header same color as body, less jarring
+\metroset{numbering=none}
+% \newcommand{\darkOrLight}{light}
 \setbeamercolor{frametitle}{bg=normal text.bg, fg=normal text.fg}
+\ifnum\pdfstrcmp{\darkOrLight}{dark}=0
+        \metroset{background=dark}
+        % keeps header same color as body, less jarring
+        \definecolor{navyblue}{HTML}{336699}
+        \setbeamercolor{alerted text}{fg=navyblue}
+        \setbeamercolor{normal text}{bg=black, fg=black!25}
+        \setbeamercolor{progress bar}{fg=white, bg=gray}
+\else
+        \definecolor{darkgray}{HTML}{EDEDED}
+        \setbeamercolor{normal text}{bg=darkgray, fg=black!80}
+        \setbeamercolor{progress bar}{bg=black!20}
+\fi
 
 
 % as per http://practicaltypography.com/presentations.html , I made an option for black background with gray text. uncomment if want normal theme
 % for dark background
- \definecolor{navyblue}{HTML}{336699}
-\setbeamercolor{alerted text}{fg=navyblue}
-\setbeamercolor{normal text}{bg=black, fg=black!25}
-\setbeamercolor{progress bar}{fg=white, bg=gray}
+ % \definecolor{navyblue}{HTML}{336699}
+% \setbeamercolor{alerted text}{fg=navyblue}
+% \setbeamercolor{normal text}{bg=black, fg=black!25}
+% \setbeamercolor{progress bar}{fg=white, bg=gray}
 % for light background
-% \setbeamercolor{normal text}{fg=black!80}
-% \setbeamercolor{progress bar}{bg=gray}
+ % \definecolor{darkgray}{HTML}{EDEDED}
+% \setbeamercolor{normal text}{bg=darkgray, fg=black!80}
+% \setbeamercolor{progress bar}{bg=black!20}
 
 % \setbeamercolor{structure}{use=normal text, bg=purple}
 % \setbeamercolor{progress bar in head/foot}{bg=normal text.bg}
