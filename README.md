@@ -1,4 +1,9 @@
-This is a fork of the amazing work by [ agoldst ](https://github.com/agoldst/tex/tree/master/lecture-slides) on using pandoc (with some crazy modidications) to take a markdown file and convert it to 2 beamer presentaions:     a notes one and a slides one.
+This is a fork of the amazing work by [ agoldst ](https://github.com/agoldst/tex/tree/master/lecture-slides) on using pandoc (with some modifications) to take a markdown file and convert it to 2 beamer presentaions:   a notes one and a slides one.
+
+I changed it to work with [the modern latex theme](https://github.com/matze/mtheme) which I also modified to be a solid color slide (I prefer simpler slides)
+
+The only tenuous part is that I wanted to be able to switch from a light/dark theme from within the classnotes.md markdown file's YAML header but Pandoc doesn't allow YAML variables to be passed to it's custom preambles. So, as part of the Makefile, it `grep`'s the markdown file for the needed value and writes it to a temporary file (which is passed to pandoc as another preamble). The file is then deleted. 
+
 # Markdown to lecture slides
 
 (with some beamer bells and whistles, by a Keynote refugee)
