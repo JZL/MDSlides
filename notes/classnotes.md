@@ -2,7 +2,7 @@
 title: A Sample Set of Slides
 author: Jonah Langlieb
 date: Totally Not the Last Minute
-color: light
+color: dark
 ---
 
 # An flowery fjord fire *ordinary* slide

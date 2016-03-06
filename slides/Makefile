@@ -7,7 +7,7 @@ slides_pdf := $(patsubst %.tex,%.pdf,$(slides_tex))
 slides_key := $(patsubst %.pdf,%.key,$(slides_pdf)) 
 
 $(slides_tex): %.tex: $(notedir)/%.md preamble-slides.tex 
-		bash ./findDarkOrLight.sh
+	bash ./findDarkOrLight.sh
 	pandoc $< \
 	    -t beamer \
 	    --slide-level 2 \
@@ -17,6 +17,7 @@ $(slides_tex): %.tex: $(notedir)/%.md preamble-slides.tex
 		-V theme:metropolis \
 	    --latex-engine xelatex \
 	    --filter overlay_filter 
+	rm darkOrLight
 
 $(slides_pdf): %.pdf: %.tex 
 	latexmk -xelatex $(basename $<)
